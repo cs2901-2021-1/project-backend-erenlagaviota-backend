@@ -33,6 +33,9 @@ class Collector:
 
     connectionString: str
     periodLimit: str
+    cursoNota: float
+    cursoRep: float
+    countPast: float
 
     def __init__(self):
         """
@@ -54,12 +57,14 @@ class Collector:
         """
         A period is considered only if its `name` (descripcionlarga) starts with `20`
         """
+        codPeriodlimit: int
         periodosDf = pd.read_sql(text("""
         SELECT descripcionlarga as periodo, codperiodo FROM PROGRAMACION.PRO_PERIODO
         """), con=self.getConnection())
         if periodosDf['periodo'] is not None:
             periodosDf['periodo'] = periodosDf['periodo'].str.replace(
                 ' ', '')
+            codPeriodlimit = int(periodosDf[periodosDf['periodo'] == self.periodLimit]['codperiodo'])  # type: ignore
             periodosDf = periodosDf[(periodosDf['periodo'].str.startswith(
                 '20')) & (periodosDf['periodo'] < self.periodLimit)]
             if periodosDf is not None:
@@ -69,7 +74,7 @@ class Collector:
                     drop=True, inplace=True)
         else:
             sys.exit()
-        return periodosDf
+        return periodosDf, codPeriodlimit
 
     def getExternalData(self):
         """
@@ -84,7 +89,7 @@ class Collector:
         `countCurrentDf` = count of students for each course to be used as target. (periodLimit)
         """
         connection = self.getConnection()
-        periodosDf = self.getPeriodInfo()
+        periodosDf, codPeriodlimit = self.getPeriodInfo()
 
         averageCursoNotasDf = pd.read_sql(text("""
         SELECT  ACT.IDACTIVIDAD AS cod_curso,
@@ -169,6 +174,10 @@ class Collector:
         WHERE AMC.ISDELETED = 'N'
         GROUP BY ACT.IDACTIVIDAD, AMT.CODPERIODORANGO
         """), con=connection)
+
+        self.cursoNota = float(averageCursoNotasDf[averageCursoNotasDf['codperiodorango'] == codPeriodlimit]['average'])  # type: ignore
+        self.cursoRep = float(averageCursoRepDf[averageCursoRepDf['codperiodorango'] == codPeriodlimit]['average']) # type: ignore
+        self.countPast = float(averageCountPastDf[averageCountPastDf['codperiodorango'] == codPeriodlimit]['count']) # type: ignore
 
         if averageCursoNotasDf['codperiodorango'] is not None and averageCursoRepDf['codperiodorango'] is not None and averageCountPastDf['codperiodorango'] is not None and periodosDf is not None:
             averageCursoNotasDf = averageCursoNotasDf[averageCursoNotasDf['codperiodorango'].isin(
