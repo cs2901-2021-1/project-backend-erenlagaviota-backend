@@ -7,3 +7,4 @@ seaborn==0.11.1
 SQLAlchemy==1.4.19
 flask==2.0.1
 autopep8
+scikit-learn
