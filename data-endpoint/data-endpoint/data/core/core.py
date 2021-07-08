@@ -8,6 +8,38 @@ from ..collector.collector import Collector
 
 
 class Core:
+    """
+    Compute projections and graphics using stored data or getting it from Collector
+
+    Attributes
+    ----------
+    ondemand : bool
+        wether using stored data or getting it from UTEC database
+
+    params : tuple
+        data collected from Collector
+
+    collector : Collector
+        collector used to get data
+
+    projection : LinearRegression
+        model to be used by projections
+
+    r2 : float
+        R2 indicator to estimate the correctness of the `projection`
+
+    correlationMatrix : pd.DataFrame
+        matrix saving correlation values between variables
+
+    Methods
+    -------
+    getModel():
+        sets `collector`, `projection`, `r2` and `correlationMatrix` class members
+
+    getProjection(codCurso: str):
+        get numerical prediction using codCurso
+
+    """
 
     ondemand: bool
     params: tuple
@@ -17,24 +49,26 @@ class Core:
     correlationMatrix: pd.DataFrame
 
     def __init__(self):
+        """
+        Instantiate collector and params
+        """
         self.collector = Collector()
         params = self.collector.getExternalDataCached()
-        ondemand = params[0]
-        if ondemand:
-            self.params = params[1:]
+        self.ondemand = params[0]
+        if self.ondemand:
+            self.params = params[1]
             self.getModel()
         # TODO:  <08-07-21, Mario> Implement not ondemand mode
 
-        # return averageCursoNotasDf, averageCursoRepDf, averageCountPastDf, countCurrentDf
     def getModel(self):
         countCurrentDf = self.params[3].rename(
-            columns={'count', {'countCurrent'}})  # type: ignore
+             columns={'count': 'countCurrent'})  # type: ignore
         averageCursoNotasDf = self.params[0].rename(
-            columns={'average', 'averageScore'})
+            columns={'average': 'averageScore'})
         averageCursoRepDf = self.params[1].rename(
-            columns={'average', 'averageRep'})
+            columns={'average': 'averageRep'})
         averageCountPastDf = self.params[2].rename(
-            columns={'count', 'countPast'})
+            columns={'count': 'countPast'})
 
         mergedDf = pd.concat( [averageCursoNotasDf, averageCursoRepDf], axis=1, join='inner')
         mergedDf = pd.concat([mergedDf, averageCountPastDf], axis=1, join='inner')
@@ -61,7 +95,10 @@ class Core:
         self.projection = lin_model
         self.correlationMatrix = mergedDf.corr().round(2)
 
-    def getProjection(self, cod_curso: str):
+    def getProjection(self, codCurso: str):
         if self.ondemand:
-            return self.projection.predict(np.array[[self.collector.cursoNota,self.collector.cursoRep,self.collector.countPast]])[0][0]  # type: ignore
+            cursoNota = float(self.collector.cursoNota[self.collector.cursoNota['cod_curso'] == codCurso]['average']) # type: ignore
+            cursoRep = float(self.collector.cursoRep[self.collector.cursoRep['cod_curso'] == codCurso]['average']) # type: ignore
+            countPast = float(self.collector.countPast[self.collector.countPast['cod_curso'] == codCurso]['count']) # type: ignore
+            return self.projection.predict(np.array([[cursoNota,cursoRep,countPast]]))[0][0]  # type: ignore
         

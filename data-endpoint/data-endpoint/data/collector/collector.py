@@ -33,9 +33,9 @@ class Collector:
 
     connectionString: str
     periodLimit: str
-    cursoNota: float
-    cursoRep: float
-    countPast: float
+    cursoNota: pd.DataFrame
+    cursoRep: pd.DataFrame
+    countPast: pd.DataFrame
 
     def __init__(self):
         """
@@ -109,7 +109,7 @@ class Collector:
         INNER JOIN GENERAL.GEN_PERSONA PERS ON PERS.CODPERSONA = GA.CODALUMNO AND PERS.ISDELETED = 'N'
         LEFT JOIN ACADEMICO.ACA_ALUMNO_AVANCE_ACADEMICO AVAN ON AVAN.CODALUMNOAVANCEACADEMICO = AMT.CODALUMNOMATRICULA AND AVAN.ISDELETED = 'N'
         WHERE AMC.ISDELETED = 'N'
-        GROUP BY ACT.IDACTIVIDAD, AMT.CODPERIODORANGO"
+        GROUP BY ACT.IDACTIVIDAD, AMT.CODPERIODORANGO
         """), con=connection)
 
         averageCursoRepDf = pd.read_sql(text("""
@@ -175,9 +175,9 @@ class Collector:
         GROUP BY ACT.IDACTIVIDAD, AMT.CODPERIODORANGO
         """), con=connection)
 
-        self.cursoNota = float(averageCursoNotasDf[averageCursoNotasDf['codperiodorango'] == codPeriodlimit]['average'])  # type: ignore
-        self.cursoRep = float(averageCursoRepDf[averageCursoRepDf['codperiodorango'] == codPeriodlimit]['average']) # type: ignore
-        self.countPast = float(averageCountPastDf[averageCountPastDf['codperiodorango'] == codPeriodlimit]['count']) # type: ignore
+        self.cursoNota = averageCursoNotasDf[averageCursoNotasDf['codperiodorango'] == codPeriodlimit]  # type: ignore
+        self.cursoRep = averageCursoRepDf[averageCursoRepDf['codperiodorango'] == codPeriodlimit] # type: ignore
+        self.countPast = averageCountPastDf[averageCountPastDf['codperiodorango'] == codPeriodlimit] # type: ignore
 
         if averageCursoNotasDf['codperiodorango'] is not None and averageCursoRepDf['codperiodorango'] is not None and averageCountPastDf['codperiodorango'] is not None and periodosDf is not None:
             averageCursoNotasDf = averageCursoNotasDf[averageCursoNotasDf['codperiodorango'].isin(
@@ -208,8 +208,7 @@ class Collector:
             sys.exit()
 
         if countCurrentDf['codperiodorango'] is not None:
-            codPeriodo = int(periodosDf[periodosDf['periodo'] == self.periodLimit]['codperiodo'])  # type: ignore
-            countCurrentDf = countCurrentDf[countCurrentDf['codperiodorango'] == codPeriodo]
+            countCurrentDf = countCurrentDf[countCurrentDf['codperiodorango'] == codPeriodlimit]
             if countCurrentDf is not None:
                 countCurrentDf = countCurrentDf.drop(columns='codperiodorango')
                 countCurrentDf = countCurrentDf.groupby(by=['cod_curso'],as_index=False).mean()  # type: ignore

@@ -1,5 +1,5 @@
 import os
-from .data.collector.collector import Collector
+from .data.core.core import Core
 
 from flask import Flask
 
@@ -21,10 +21,8 @@ def create_app(test_config=None):
         pass
 
     @app.route('/hello')
-    def aaaaaa():
-        xd = Collector()
-        xd.getExternalData()
-        return "asdww"
-        
+    def test():
+        test_core = Core()
+        return str(int(xd.getProjection('AM0001')))  # type: ignore
 
     return app
