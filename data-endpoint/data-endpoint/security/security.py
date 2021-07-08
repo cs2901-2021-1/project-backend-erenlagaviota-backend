@@ -6,6 +6,9 @@ from flask import Response
 
 
 def auth_required(function):
+    """
+    Verify authentication header in every request
+    """
     @wraps(function)
     def authenticated(*args, **kwargs):
         auth = request.authorization
