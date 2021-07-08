@@ -1,5 +1,5 @@
 import os
-from .data.core.core import Core
+from .controller.controller import api
 
 from flask import Flask
 
@@ -20,9 +20,7 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/hello')
-    def test():
-        test_core = Core()
-        return str(int(xd.getProjection('AM0001')))  # type: ignore
+    app.register_blueprint(api,url_prefix='/api')
+
 
     return app
