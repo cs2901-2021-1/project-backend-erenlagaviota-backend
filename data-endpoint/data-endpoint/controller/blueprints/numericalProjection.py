@@ -5,7 +5,7 @@ from ...security.security import auth_required
 
 numericalProjection = Blueprint('numericalProjection',__name__)
 
-@numericalProjection.route('/data')
+@numericalProjection.route('/data',methods=['POST'])
 @auth_required
 def getNumericalProjection():
     body = request.json
