@@ -47,7 +47,7 @@ class Collector:
             self.connectionString = connection
             self.periodLimit = '2020-2'
         else:
-            sys.exit()
+            raise Exception("error")
 
     def getConnection(self):
         engine = create_engine(self.connectionString)
@@ -73,7 +73,7 @@ class Collector:
                 periodosDf.reset_index(  # type: ignore
                     drop=True, inplace=True)
         else:
-            sys.exit()
+            raise Exception("error")
         return periodosDf, codPeriodlimit
 
     def getExternalData(self):
@@ -201,11 +201,11 @@ class Collector:
                     averageCountPastDf = averageCountPastDf.groupby(
                         by=['cod_curso'], as_index=False).mean()
                 else:
-                    sys.exit()
+                    raise Exception("error")
             else:
-                sys.exit()
+                raise Exception("error")
         else:
-            sys.exit()
+            raise Exception("error")
 
         if countCurrentDf['codperiodorango'] is not None:
             countCurrentDf = countCurrentDf[countCurrentDf['codperiodorango'] == codPeriodlimit]
@@ -213,7 +213,7 @@ class Collector:
                 countCurrentDf = countCurrentDf.drop(columns='codperiodorango')
                 countCurrentDf = countCurrentDf.groupby(by=['cod_curso'],as_index=False).mean()  # type: ignore
             else:
-                sys.exit()
+                raise Exception("error")
 
         return averageCursoNotasDf, averageCursoRepDf, averageCountPastDf, countCurrentDf
 
