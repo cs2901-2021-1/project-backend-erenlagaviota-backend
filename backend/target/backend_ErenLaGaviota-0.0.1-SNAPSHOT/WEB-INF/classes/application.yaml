@@ -1,0 +1,33 @@
+logging:
+    level:
+        org:
+            springframework:
+                web: DEBUG
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        initialization: always
+        password: ${DBO_PASSWORD}
+        testWhileIdle: true
+        url: ${DBO_URL}
+        username: ${DBO_USERNAME}
+        validationQuery: SELECT 1
+    jpa:
+        generate-ddl: true
+        hibernate:
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: false
+    security:
+        oauth2:
+            client:
+                registration:
+                    google:
+                        client-id: ${CLIENT_ID}
+                        client-secret: ${CLIENT_SECRET}
+                        redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+                        scope:
+                          - email
+                          - profile
