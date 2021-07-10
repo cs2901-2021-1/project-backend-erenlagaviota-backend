@@ -8,12 +8,15 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>backend</artifactId>
+    <artifactId>backend_ErenLaGaviota</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>backend</name>
+    <name>backend_ErenLaGaviota</name>
     <description>Consume flask endpoint</description>
     <properties>
         <java.version>11</java.version>
+        <sonar.projectKey>cs2901-2021-1_project-backend-erenlagaviota-backend</sonar.projectKey>
+        <sonar.organization>cs2901-2021-1</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <dependencies>
         <dependency>
