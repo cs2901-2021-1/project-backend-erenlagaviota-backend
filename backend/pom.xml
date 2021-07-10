@@ -10,6 +10,7 @@
     <groupId>com.example</groupId>
     <artifactId>backend_ErenLaGaviota</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>backend_ErenLaGaviota</name>
     <description>Consume flask endpoint</description>
     <properties>
