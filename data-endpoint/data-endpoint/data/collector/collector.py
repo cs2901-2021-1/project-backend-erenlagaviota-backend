@@ -2,7 +2,7 @@ import os
 import sys
 from sqlalchemy import create_engine, text
 import pandas as pd
-
+from ...exception.exception import *
 
 class Collector:
     """
@@ -73,7 +73,7 @@ class Collector:
                 periodosDf.reset_index(  # type: ignore
                     drop=True, inplace=True)
         else:
-            raise Exception("error")
+            raise PeriodError()
         return periodosDf, codPeriodlimit
 
     def getExternalData(self):
@@ -201,11 +201,11 @@ class Collector:
                     averageCountPastDf = averageCountPastDf.groupby(
                         by=['cod_curso'], as_index=False).mean()
                 else:
-                    raise Exception("error")
+                    raise PeriodError()
             else:
-                raise Exception("error")
+                raise PeriodError()
         else:
-            raise Exception("error")
+            raise PeriodRangeError()
 
         if countCurrentDf['codperiodorango'] is not None:
             countCurrentDf = countCurrentDf[countCurrentDf['codperiodorango'] == codPeriodlimit]
@@ -213,7 +213,7 @@ class Collector:
                 countCurrentDf = countCurrentDf.drop(columns='codperiodorango')
                 countCurrentDf = countCurrentDf.groupby(by=['cod_curso'],as_index=False).mean()  # type: ignore
             else:
-                raise Exception("error")
+                raise PeriodRangeError()
 
         return averageCursoNotasDf, averageCursoRepDf, averageCountPastDf, countCurrentDf
 
