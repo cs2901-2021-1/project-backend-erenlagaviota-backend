@@ -1,5 +1,8 @@
 package com.example.backend.config;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 import com.example.backend.security.CustomOAuth2UserService;
 import com.example.backend.security.RestAuthenticationEntryPoint;
 import com.example.backend.security.TokenAuthenticationFilter;
@@ -9,11 +12,23 @@ import com.example.backend.security.oauth2.OAuth2AuthenticationSuccessHandler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
+import lombok.RequiredArgsConstructor;
+
+@Configuration
+@EnableWebSecurity
+@RequiredArgsConstructor
+@EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     CustomOAuth2UserService customOAuth2UserService;
@@ -43,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .disable().formLogin().disable().httpBasic().disable().exceptionHandling()
                 .authenticationEntryPoint(new RestAuthenticationEntryPoint()).and().authorizeRequests()
                 .antMatchers("/", "/error", "/favicon.ico", "/**/*.png", "/**/*.gif", "/**/*.svg", "/**/*.jpg",
-                        "/**/*.html", "/**/*.css", "/**/*.js")
+                        "/**/*.html", "/**/*.css", "/**/*.js", "/callback/", "/oauth2/callback/")
                 .permitAll().antMatchers("/auth/**", "/oauth2/**").permitAll().anyRequest().authenticated().and()
                 .oauth2Login().authorizationEndpoint().baseUri("/oauth2/authorize")
                 .authorizationRequestRepository(cookieAuthorizationRequestRepository()).and().redirectionEndpoint()

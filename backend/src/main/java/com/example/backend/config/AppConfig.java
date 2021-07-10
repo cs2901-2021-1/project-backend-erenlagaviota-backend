@@ -28,8 +28,8 @@ public class AppConfig {
         return tokenExpirationMsec;
     }
 
-    private String tokenSecret;
+    private String tokenSecret = "pruebaprueba";
 
-    private long tokenExpirationMsec;
+    private long tokenExpirationMsec = 600000;
 
 }
