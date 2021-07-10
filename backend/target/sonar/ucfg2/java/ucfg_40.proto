@@ -1,0 +1,16 @@
+
+Qcom.example.backend.security.UserPrincipal#getAuthorities()Ljava/util/Collection;ß
+ú/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaN2 N(@"1*ã
+1ß
+ú/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaO O(ê
+ç
+ß
+ú/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaO O(
+%0java.util.Collection"__id*?*=,
+*com.example.backend.security.UserPrincipal"
+authorities"»
+ß
+ú/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaO O(
+
+%0java.util.CollectionB.,
+*com.example.backend.security.UserPrincipal

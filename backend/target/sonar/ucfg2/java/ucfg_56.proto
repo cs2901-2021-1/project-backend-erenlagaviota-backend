@@ -1,0 +1,57 @@
+
+Öcom.example.backend.service.UserServiceImpl#loadUserById(Ljava/lang/Long;)Lorg/springframework/security/core/userdetails/UserDetails;®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (#"1*»
+1®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java ("Æ
+´
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java ("3
+%0-com.example.backend.repository.UserRepository"__id*C*A-
++com.example.backend.service.UserServiceImpl"
+userRepositoryöó
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (/
+%1java.util.Optional"corg.springframework.data.repository.CrudRepository#findById(Ljava/lang/Object;)Ljava/util/Optional;*5
+3
+%0-com.example.backend.repository.UserRepository*
+
+idjava.lang.Long2findById(Ljava/lang/Object;)¶
+£
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java< (q!
+%2java.util.function.Supplier"__declareFunction*@>
+<__sonar_lambda_3$com.example.backend.service.UserServiceImple
+c
+
+__unknown_file ()
+!
+%2java.util.function.Supplier"
+id"__id*
+
+idjava.lang.Longíè
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (r$
+%5com.example.backend.model.User"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*
+
+%1java.util.Optional*#
+!
+%2java.util.function.Supplier2*orElseThrow(Ljava/util/function/Supplier;)Ñ
+Å
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (s&
+usercom.example.backend.model.User"__id*&
+$
+%5com.example.backend.model.Userª
+∏
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java! !()0
+%6*com.example.backend.security.UserPrincipal"com.example.backend.security.UserPrincipal#create(Lcom/example/backend/model/User;)Lcom/example/backend/security/UserPrincipal;*.",
+*com.example.backend.security.UserPrincipal*(
+&
+usercom.example.backend.model.User"ﬂ
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java! !(*2
+0
+%6*com.example.backend.security.UserPrincipal:
+idjava.lang.LongB/-
++com.example.backend.service.UserServiceImpl

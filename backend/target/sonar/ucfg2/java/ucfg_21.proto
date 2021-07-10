@@ -1,0 +1,19 @@
+
+¤com.example.backend.config.SecurityConfig#cookieAuthorizationRequestRepository()Lcom/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository;¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java3: 3(^"1*€	
+1¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java4 4(CÚ×
+¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java4 4(AX
+%0Rcom.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository"Rcom.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepositoryì
+é
+¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java4 4(C
+%1"\com.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository#<init>()V*Z
+X
+%0Rcom.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository"…
+¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java4 4(DZ
+X
+%0Rcom.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepositoryB-+
+)com.example.backend.config.SecurityConfig

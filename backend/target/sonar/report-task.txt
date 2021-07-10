@@ -1,0 +1,7 @@
+organization=cs2901-2021-1
+projectKey=cs2901-2021-1_project-backend-erenlagaviota-backend
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.21709
+dashboardUrl=https://sonarcloud.io/dashboard?id=cs2901-2021-1_project-backend-erenlagaviota-backend
+ceTaskId=AXqRbcywyQMh4Rvse26Z
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXqRbcywyQMh4Rvse26Z

@@ -1,0 +1,19 @@
+
+}com.example.backend.config.SecurityConfig#tokenAuthenticationFilter()Lcom/example/backend/security/TokenAuthenticationFilter;¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java.% .(>"1*ô
+1¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java/ /(.¢Ÿ
+¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java/ /(,<
+%06com.example.backend.security.TokenAuthenticationFilter"6com.example.backend.security.TokenAuthenticationFilter´
+±
+¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java/ /(.
+%1"@com.example.backend.security.TokenAuthenticationFilter#<init>()V*>
+<
+%06com.example.backend.security.TokenAuthenticationFilter"é
+¦
+›/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/SecurityConfig.java/ /(/>
+<
+%06com.example.backend.security.TokenAuthenticationFilterB-+
+)com.example.backend.config.SecurityConfig

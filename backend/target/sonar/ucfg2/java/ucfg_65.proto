@@ -1,0 +1,38 @@
+
+>__sonar_lambda_4$com.example.backend.controller.UserControllerª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (h"startingBlock*ê
+startingBlockª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (h¦
+£
+
+__unknown_file (;
+userPrincipal*com.example.backend.security.UserPrincipal"__id*D*B/
+-com.example.backend.controller.UserController"
+userPrincipal*
+1*Ê
+1ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.javaA (GÜÙ
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.javaO (g
+%4java.lang.String"Gcom.example.backend.security.UserPrincipal#getEmail()Ljava/lang/String;*=
+;
+userPrincipal*com.example.backend.security.UserPrincipal2
+getEmail()¨¥
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java' (@=
+%57com.example.backend.exception.ResourceNotFoundException"7com.example.backend.exception.ResourceNotFoundExceptionœ
+™
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java# (h
+%6"wcom.example.backend.exception.ResourceNotFoundException#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V*?
+=
+%57com.example.backend.exception.ResourceNotFoundException*
+User*
+id*
+
+%4java.lang.String"î
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java# (h?
+=
+%57com.example.backend.exception.ResourceNotFoundExceptionB
+java.util.function.Supplier

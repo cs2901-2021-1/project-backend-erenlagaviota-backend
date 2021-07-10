@@ -1,0 +1,17 @@
+
+Icom.example.backend.security.UserPrincipal#getAttributes()Ljava/util/Map;§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaS S(,"1*ü
+1§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaT T(ˆ
+…
+§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaT T(
+%0java.util.Map"__id*>*<,
+*com.example.backend.security.UserPrincipal"
+
+attributes"Á
+§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.javaT T(
+
+%0java.util.MapB.,
+*com.example.backend.security.UserPrincipal

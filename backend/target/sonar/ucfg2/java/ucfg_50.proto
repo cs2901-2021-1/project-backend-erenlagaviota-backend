@@ -1,0 +1,73 @@
+
+W__sonar_lambda_1$com.example.backend.security.oauth2.OAuth2AuthenticationSuccessHandler√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaMG U(	"startingBlock*ö
+2√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaR R("Œ
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaR R(
+""*é
+3√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaQ Q($ôñ
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaQ Q(.	
+%9int"java.net.URI#getPort()I*
+
+authorizedURIjava.net.URI2	getPort()ûõ
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaQ2 Q(M
+
+%10int"java.net.URI#getPort()I*#
+!
+clientRedirectUrijava.net.URI2	getPort()*
+2
+1*Ü
+startingBlock√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaMG U(	©
+¶
+
+__unknown_file (!
+clientRedirectUrijava.net.URI"__id*a*_H
+Fcom.example.backend.security.oauth2.OAuth2AuthenticationSuccessHandler"
+clientRedirectUri*
+4*ì
+4√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaO  O(#”
+–
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaO  O(A
+%5java.net.URI"5java.net.URI#create(Ljava/lang/String;)Ljava/net/URI;*"
+java.net.URI*+
+)
+authorizedRedirectUrijava.lang.StringÑ
+Å
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaO O(B
+authorizedURIjava.net.URI"__id*
+
+%5java.net.URI∑¥
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaP P('
+%6java.lang.String"(java.net.URI#getHost()Ljava/lang/String;*
+
+authorizedURIjava.net.URI2	getHost()ª∏
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaP9 P(T
+%7java.lang.String"(java.net.URI#getHost()Ljava/lang/String;*#
+!
+clientRedirectUrijava.net.URI2	getHost()ÍÁ
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaP P(U
+%8boolean"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
+
+%6java.lang.String*
+
+%7java.lang.String2$equalsIgnoreCase(Ljava/lang/String;)*
+3
+1*ö
+1√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaT T("Œ
+√
+∏/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.javaT T(
+"":)
+authorizedRedirectUrijava.lang.StringB 
+java.util.function.Predicate

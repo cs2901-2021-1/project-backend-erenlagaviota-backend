@@ -1,0 +1,16 @@
+
+Pcom.example.backend.config.AppConfig#getAuthorizedRedirectUris()Ljava/util/List;¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java (1"1*ò
+1¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java (%‰
+†
+¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java (%
+%0java.util.List"__id*D*B&
+$com.example.backend.config.AppConfig"
+authorizedRedirectUris"¼
+¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java (&
+
+%0java.util.ListB(&
+$com.example.backend.config.AppConfig

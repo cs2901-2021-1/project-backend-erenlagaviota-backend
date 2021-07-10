@@ -1,0 +1,32 @@
+
+<__sonar_lambda_3$com.example.backend.service.UserServiceImpl®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java< (q"startingBlock*≤
+startingBlock®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java< (qq
+o
+
+__unknown_file (
+idjava.lang.Long"__id*7*5-
++com.example.backend.service.UserServiceImpl"
+id*
+1*·
+1®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java` (f¶£
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.javaF (_=
+%37com.example.backend.exception.ResourceNotFoundException"7com.example.backend.exception.ResourceNotFoundExceptionò
+ï
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.javaB (q
+%4"wcom.example.backend.exception.ResourceNotFoundException#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V*?
+=
+%37com.example.backend.exception.ResourceNotFoundException*
+User*
+id*
+
+idjava.lang.Long"Ï
+®
+ù/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.javaB (q?
+=
+%37com.example.backend.exception.ResourceNotFoundExceptionB
+java.util.function.Supplier

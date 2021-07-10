@@ -1,0 +1,87 @@
+
+Šcom.example.backend.controller.UserController#getCurrentUser(Lcom/example/backend/security/UserPrincipal;)Lcom/example/backend/model/User;ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java ("startingBlock*‰
+startingBlockª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (H¹
+¶
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (
+%8"
+__annotate*64
+2org.springframework.web.bind.annotation.GetMapping*=
+;
+userPrincipal*com.example.backend.security.UserPrincipal¿
+¼
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java ($
+%9"
+__annotate*<:
+8org.springframework.security.access.prepost.PreAuthorize*=
+;
+userPrincipal*com.example.backend.security.UserPrincipal°
+­
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (+
+%10"
+__annotate*,*
+(com.example.backend.security.CurrentUser*=
+;
+userPrincipal*com.example.backend.security.UserPrincipal”
+‘
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java: (G;
+userPrincipal*com.example.backend.security.UserPrincipal"__annotation*
+
+%8*
+
+%9*
+
+%10*
+1*
+1ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (²
+¯
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (3
+%0-com.example.backend.repository.UserRepository"__id*E*C/
+-com.example.backend.controller.UserController"
+userRepositoryÜÙ
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java* (B
+%1java.lang.String"Gcom.example.backend.security.UserPrincipal#getEmail()Ljava/lang/String;*=
+;
+userPrincipal*com.example.backend.security.UserPrincipal2
+getEmail()Ÿœ
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (C
+%2java.util.Optional"acom.example.backend.repository.UserRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;*5
+3
+%0-com.example.backend.repository.UserRepository*
+
+%1java.lang.String2findByEmail(Ljava/lang/String;)ª
+§
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (h!
+%3java.util.function.Supplier"__declareFunction*B@
+>__sonar_lambda_4$com.example.backend.controller.UserController˜
+•
+
+__unknown_file (4
+!
+%3java.util.function.Supplier"
+userPrincipal"__id*=
+;
+userPrincipal*com.example.backend.security.UserPrincipal”‘
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (i$
+%7com.example.backend.model.User"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*
+
+%2java.util.Optional*#
+!
+%3java.util.function.Supplier2*orElseThrow(Ljava/util/function/Supplier;)"Õ
+ª
+Ÿ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/controller/UserController.java (j&
+$
+%7com.example.backend.model.User:;
+userPrincipal*com.example.backend.security.UserPrincipalB1/
+-com.example.backend.controller.UserController

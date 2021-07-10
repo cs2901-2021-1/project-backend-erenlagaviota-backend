@@ -1,0 +1,57 @@
+
+com.example.backend.service.UserServiceImpl#loadUserByUsername(Ljava/lang/String;)Lorg/springframework/security/core/userdetails/UserDetails;¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java ()"1*Ö
+1¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java ("®
+«
+¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java ("3
+%0-com.example.backend.repository.UserRepository"__id*C*A-
++com.example.backend.service.UserServiceImpl"
+userRepository 
+¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (5
+%1java.util.Optional"acom.example.backend.repository.UserRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;*5
+3
+%0-com.example.backend.repository.UserRepository*
+
+emailjava.lang.String2findByEmail(Ljava/lang/String;)¦
+£
+¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (h!
+%2java.util.function.Supplier"__declareFunction*@>
+<__sonar_lambda_2$com.example.backend.service.UserServiceImplm
+k
+
+__unknown_file (,
+!
+%2java.util.function.Supplier"
+email"__id*
+
+emailjava.lang.String’
+¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (i$
+%6com.example.backend.model.User"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*
+
+%1java.util.Optional*#
+!
+%2java.util.function.Supplier2*orElseThrow(Ljava/util/function/Supplier;)„
+
+¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (j&
+usercom.example.backend.model.User"__id*&
+$
+%6com.example.backend.model.User»
+¸
+¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java ()0
+%7*com.example.backend.security.UserPrincipal"com.example.backend.security.UserPrincipal#create(Lcom/example/backend/model/User;)Lcom/example/backend/security/UserPrincipal;*.",
+*com.example.backend.security.UserPrincipal*(
+&
+usercom.example.backend.model.User"ß
+¨
+/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/service/UserServiceImpl.java (*2
+0
+%7*com.example.backend.security.UserPrincipal:
+emailjava.lang.StringB/-
++com.example.backend.service.UserServiceImpl

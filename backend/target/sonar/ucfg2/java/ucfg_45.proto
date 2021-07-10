@@ -1,0 +1,16 @@
+
+Gcom.example.backend.config.AppConfig#getTokenSecret()Ljava/lang/String;¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java ( "1*ë
+1¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java (€
+ý
+¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java (
+%0java.lang.String"__id*9*7&
+$com.example.backend.config.AppConfig"
+tokenSecret"¾
+¡
+–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/config/AppConfig.java (
+
+%0java.lang.StringB(&
+$com.example.backend.config.AppConfig

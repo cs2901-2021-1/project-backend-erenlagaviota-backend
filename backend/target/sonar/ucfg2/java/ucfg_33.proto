@@ -1,0 +1,16 @@
+
+Fcom.example.backend.security.UserPrincipal#getUserId()Ljava/lang/Long;§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java+ +("1*ú
+1§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java, ,(…
+‚
+§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java, ,(
+%0java.lang.Long"__id*:*8,
+*com.example.backend.security.UserPrincipal"
+userId"Â
+§
+œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java, ,(
+
+%0java.lang.LongB.,
+*com.example.backend.security.UserPrincipal
