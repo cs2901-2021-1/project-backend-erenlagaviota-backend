@@ -1,31 +1,0 @@
-
-Tcom.example.backend.util.CookieUtils#serialize(Ljava/lang/Object;)Ljava/lang/String;¡
-–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/util/CookieUtils.java1 1(""1*Ÿ
-
-1¡
-–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/util/CookieUtils.java2 2(™
-–
-¡
-–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/util/CookieUtils.java2 2(%
-%0java.util.Base64$Encoder":java.util.Base64#getUrlEncoder()Ljava/util/Base64$Encoder;*"
-java.util.Base64Ñ
-Î
-¡
-–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/util/CookieUtils.java25 2(Y
-%1byte[]"Korg.springframework.util.SerializationUtils#serialize(Ljava/lang/Object;)[B*/"-
-+org.springframework.util.SerializationUtils*
-
-objectjava.lang.ObjectÄÁ
-¡
-–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/util/CookieUtils.java2 2(Z
-%2java.lang.String"=java.util.Base64$Encoder#encodeToString([B)Ljava/lang/String;* 
-
-%0java.util.Base64$Encoder*
-
-%1byte[]2encodeToString([B)"¾
-¡
-–/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/util/CookieUtils.java2 2([
-
-%2java.lang.String:
-objectjava.lang.ObjectB("&
-$com.example.backend.util.CookieUtils

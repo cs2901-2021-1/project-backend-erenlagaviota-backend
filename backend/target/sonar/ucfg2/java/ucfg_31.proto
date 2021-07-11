@@ -1,35 +1,0 @@
-
-Žcom.example.backend.security.UserPrincipal#create(Lcom/example/backend/model/User;Ljava/util/Map;)Lcom/example/backend/security/UserPrincipal;§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java!  !(&"1*ƒ
-1§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java"& "(3º
-·
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java"& "(@0
-%0*com.example.backend.security.UserPrincipal"com.example.backend.security.UserPrincipal#create(Lcom/example/backend/model/User;)Lcom/example/backend/security/UserPrincipal;*.",
-*com.example.backend.security.UserPrincipal*(
-&
-usercom.example.backend.model.User¤
-¡
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java" "(A;
-userPrincipal*com.example.backend.security.UserPrincipal"__id*2
-0
-%0*com.example.backend.security.UserPrincipalƒ€
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java# #(/
-
-%1void"Jcom.example.backend.security.UserPrincipal#setAttributes(Ljava/util/Map;)V*=
-;
-userPrincipal*com.example.backend.security.UserPrincipal*
-
-
-attributesjava.util.Map2setAttributes(Ljava/util/Map;)"é
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/UserPrincipal.java$ $(=
-;
-userPrincipal*com.example.backend.security.UserPrincipal:&
-usercom.example.backend.model.User:
-
-attributesjava.util.MapB.",
-*com.example.backend.security.UserPrincipal

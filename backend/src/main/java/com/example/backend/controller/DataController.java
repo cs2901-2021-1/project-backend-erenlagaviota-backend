@@ -4,6 +4,7 @@ package com.example.backend.controller;
 import com.example.backend.model.CourseDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.client.support.BasicAuthorizationInterceptor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

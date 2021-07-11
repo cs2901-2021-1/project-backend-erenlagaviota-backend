@@ -1,149 +1,0 @@
-
-|com.example.backend.security.TokenProvider#createToken(Lorg/springframework/security/core/Authentication;)Ljava/lang/String;§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java ("1*°:
-1§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java6 (Dîë
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java6 (S
-%0java.lang.Object"Qorg.springframework.security.core.Authentication#getPrincipal()Ljava/lang/Object;*D
-B
-authentication0org.springframework.security.core.Authentication2getPrincipal()Š
-‡
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (T;
-userPrincipal*com.example.backend.security.UserPrincipal"__id*
-
-%0java.lang.ObjectÓÐ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (
-%1java.util.Date"java.util.Dateå
-â
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (
-%2"java.util.Date#<init>()V*
-
-%1java.util.Dateâ
-ß
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (
-nowjava.util.Date"__id*
-
-%1java.util.Dateøõ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java# (0
-
-%3long"java.util.Date#getTime()J*
-
-nowjava.util.Date2	getTime()ž
-›
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java3 (<*
-%4$com.example.backend.config.AppConfig"__id*=*;,
-*com.example.backend.security.TokenProvider"
-	appConfigÁ¾
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java3 (U
-
-%5long">com.example.backend.config.AppConfig#getTokenExpirationMsec()J*,
-*
-%4$com.example.backend.config.AppConfig2getTokenExpirationMsec()ÓÐ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java ("
-%6java.util.Date"java.util.Dateî
-ë
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (V
-%7"java.util.Date#<init>(J)V*
-
-%6java.util.Date*
-""é
-æ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (W
-
-expiryDatejava.util.Date"__id*
-
-%6java.util.Date¥
-¢
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java ( 
-%8io.jsonwebtoken.JwtBuilder":io.jsonwebtoken.Jwts#builder()Lio/jsonwebtoken/JwtBuilder;*"
-io.jsonwebtoken.Jwts×Ô
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java) (B
-%9java.lang.Long"Fcom.example.backend.security.UserPrincipal#getUserId()Ljava/lang/Long;*=
-;
-userPrincipal*com.example.backend.security.UserPrincipal2getUserId()—”
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java) (M
-%10java.lang.String"+java.lang.Long#toString()Ljava/lang/String;*
-
-%9java.lang.Long2
-toString()†ƒ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (N!
-%11io.jsonwebtoken.JwtBuilder"Uio.jsonwebtoken.JwtBuilder#setSubject(Ljava/lang/String;)Lio/jsonwebtoken/JwtBuilder;*"
- 
-%8io.jsonwebtoken.JwtBuilder*
-
-%10java.lang.String2setSubject(Ljava/lang/String;)ÔÑ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java_ (c
-%12java.util.Date"java.util.Dateç
-ä
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java[ (e
-%13"java.util.Date#<init>()V*
-
-%12java.util.Dateƒ€
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (f!
-%14io.jsonwebtoken.JwtBuilder"Tio.jsonwebtoken.JwtBuilder#setIssuedAt(Ljava/util/Date;)Lio/jsonwebtoken/JwtBuilder;*#
-!
-%11io.jsonwebtoken.JwtBuilder*
-
-%12java.util.Date2setIssuedAt(Ljava/util/Date;)Ž‹
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (*!
-%15io.jsonwebtoken.JwtBuilder"Vio.jsonwebtoken.JwtBuilder#setExpiration(Ljava/util/Date;)Lio/jsonwebtoken/JwtBuilder;*#
-!
-%14io.jsonwebtoken.JwtBuilder*
-
-
-expiryDatejava.util.Date2setExpiration(Ljava/util/Date;)æ
-ã
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java4 (L)
-%16"io.jsonwebtoken.SignatureAlgorithm"__id*
-""Ÿ
-œ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.javaN (W+
-%17$com.example.backend.config.AppConfig"__id*=*;,
-*com.example.backend.security.TokenProvider"
-	appConfigÐÍ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.javaN (h
-%18java.lang.String"Gcom.example.backend.config.AppConfig#getTokenSecret()Ljava/lang/String;*-
-+
-%17$com.example.backend.config.AppConfig2getTokenSecret()øõ
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (i!
-%19io.jsonwebtoken.JwtBuilder"wio.jsonwebtoken.JwtBuilder#signWith(Lio/jsonwebtoken/SignatureAlgorithm;Ljava/lang/String;)Lio/jsonwebtoken/JwtBuilder;*#
-!
-%15io.jsonwebtoken.JwtBuilder*+
-)
-%16"io.jsonwebtoken.SignatureAlgorithm*
-
-%18java.lang.String2@signWith(Lio/jsonwebtoken/SignatureAlgorithm;Ljava/lang/String;)®«
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (s
-%20java.lang.String"6io.jsonwebtoken.JwtBuilder#compact()Ljava/lang/String;*#
-!
-%19io.jsonwebtoken.JwtBuilder2	compact()"Å
-§
-œ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/TokenProvider.java (t
-
-%20java.lang.String:B
-authentication0org.springframework.security.core.AuthenticationB.,
-*com.example.backend.security.TokenProvider

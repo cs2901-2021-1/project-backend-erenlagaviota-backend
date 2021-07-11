@@ -1,160 +1,0 @@
-
-ƒcom.example.backend.security.CustomOAuth2UserService#processOAuth2User(Lorg/springframework/security/oauth2/client/userinfo/OAuth2UserRequest;Lorg/springframework/security/oauth2/core/user/OAuth2User;)Lorg/springframework/security/oauth2/core/user/OAuth2User;±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java( ((("6*“
-2±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java5> 5(NÌÉ
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java5 5(=L
-%13Ecom.example.backend.exception.OAuth2AuthenticationProcessingException"Ecom.example.backend.exception.OAuth2AuthenticationProcessingException…
-‚
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java5 5(O
-%14"acom.example.backend.exception.OAuth2AuthenticationProcessingException#<init>(Ljava/lang/String;)V*N
-L
-%13Ecom.example.backend.exception.OAuth2AuthenticationProcessingException*
-User not found*
-0*‡
-3±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java3 3(·´
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java3 3(%%
-%12com.example.backend.model.User"*java.util.Optional#get()Ljava/lang/Object;*$
-"
-userOptionaljava.util.Optional2get()Ž
-‹
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java3 3(%&
-usercom.example.backend.model.User"__id*'
-%
-%12com.example.backend.model.User*
-1*¼
-4±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java/& /(4À
-½
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java/& /(43
-%8-com.example.backend.repository.UserRepository"__id*L*J6
-4com.example.backend.security.CustomOAuth2UserService"
-userRepositoryþû
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java/A /(Z
-%9java.lang.String"Tcom.example.backend.security.oauth2.user.OAuth2UserInfo#getEmail()Ljava/lang/String;*K
-I
-oAuth2UserInfo7com.example.backend.security.oauth2.user.OAuth2UserInfo2
-getEmail()§¤
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java/& /([
-%10java.util.Optional"acom.example.backend.repository.UserRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;*5
-3
-%8-com.example.backend.repository.UserRepository*
-
-%9java.lang.String2findByEmail(Ljava/lang/String;)þ
-û
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java/ /(\"
-userOptionaljava.util.Optional"__id*
-
-%10java.util.Optionalí
-ê
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java0 0(&
-usercom.example.backend.model.User"__id*
-""›˜
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java2 2($
-%11boolean"java.util.Optional#isPresent()Z*$
-"
-userOptionaljava.util.Optional2isPresent()*
-2
-3*¦
-5±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java,> ,(dËÈ
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java, ,(=K
-%6Ecom.example.backend.exception.OAuth2AuthenticationProcessingException"Ecom.example.backend.exception.OAuth2AuthenticationProcessingException™
-–
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java, ,(e
-%7"acom.example.backend.exception.OAuth2AuthenticationProcessingException#<init>(Ljava/lang/String;)V*M
-K
-%6Ecom.example.backend.exception.OAuth2AuthenticationProcessingException*(&
-$Email not found from OAuth2 provider*
-0*å
-6±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java)( )(=¬©
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java* *(9P
-%0Jorg.springframework.security.oauth2.client.registration.ClientRegistration"©org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest#getClientRegistration()Lorg/springframework/security/oauth2/client/registration/ClientRegistration;*\
-Z
-oAuth2UserRequestEorg.springframework.security.oauth2.client.userinfo.OAuth2UserRequest2getClientRegistration()ª§
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java* *(M
-%1java.lang.String"porg.springframework.security.oauth2.client.registration.ClientRegistration#getRegistrationId()Ljava/lang/String;*R
-P
-%0Jorg.springframework.security.oauth2.client.registration.ClientRegistration2getRegistrationId()Š
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java*O *(i
-%2java.util.Map"dorg.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal#getAttributes()Ljava/util/Map;*H
-F
-
-oAuth2User8org.springframework.security.oauth2.core.user.OAuth2User2getAttributes()š
-—
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java)( *(j=
-%37com.example.backend.security.oauth2.user.OAuth2UserInfo"¬com.example.backend.security.oauth2.user.OAuth2UserInfoFactory#getOAuth2UserInfo(Ljava/lang/String;Ljava/util/Map;)Lcom/example/backend/security/oauth2/user/OAuth2UserInfo;*B"@
->com.example.backend.security.oauth2.user.OAuth2UserInfoFactory*
-
-%1java.lang.String*
-
-%2java.util.MapÉ
-Æ
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java) *(kI
-oAuth2UserInfo7com.example.backend.security.oauth2.user.OAuth2UserInfo"__id*?
-=
-%37com.example.backend.security.oauth2.user.OAuth2UserInfoþû
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java+  +(9
-%4java.lang.String"Tcom.example.backend.security.oauth2.user.OAuth2UserInfo#getEmail()Ljava/lang/String;*K
-I
-oAuth2UserInfo7com.example.backend.security.oauth2.user.OAuth2UserInfo2
-getEmail()Í
-Ê
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java+ +(:
-%5boolean"Aorg.springframework.util.ObjectUtils#isEmpty(Ljava/lang/Object;)Z*("&
-$org.springframework.util.ObjectUtils*
-
-%4java.lang.String*
-4
-5*Ñ
-0 "É
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java9 9(
-implicit return*¤
-
-1±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java8 8(Ž‹
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java8* 8(D
-%15java.util.Map"dorg.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal#getAttributes()Ljava/util/Map;*H
-F
-
-oAuth2User8org.springframework.security.oauth2.core.user.OAuth2User2getAttributes()í
-ê
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java8 8(E1
-%16*com.example.backend.security.UserPrincipal"Žcom.example.backend.security.UserPrincipal#create(Lcom/example/backend/model/User;Ljava/util/Map;)Lcom/example/backend/security/UserPrincipal;*.",
-*com.example.backend.security.UserPrincipal*(
-&
-usercom.example.backend.model.User*
-
-%15java.util.Map"é
-±
-¦/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/CustomOAuth2UserService.java8 8(F3
-1
-%16*com.example.backend.security.UserPrincipal:Z
-oAuth2UserRequestEorg.springframework.security.oauth2.client.userinfo.OAuth2UserRequest:F
-
-oAuth2User8org.springframework.security.oauth2.core.user.OAuth2UserB86
-4com.example.backend.security.CustomOAuth2UserService

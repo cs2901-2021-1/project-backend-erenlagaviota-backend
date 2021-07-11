@@ -1,34 +1,0 @@
-
-‰com.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository#removeAuthorizationRequest(Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/security/oauth2/core/endpoint/OAuth2AuthorizationRequest;œ
-ƒ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java,& ,(@"startingBlock*º
-startingBlockœ
-ƒ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java,@ ,(\≥
-∞
-œ
-ƒ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java+ +(
-%1"
-__annotate*
-java.lang.Override*2
-0
-request%javax.servlet.http.HttpServletRequestù
-ö
-œ
-ƒ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java,T ,([0
-request%javax.servlet.http.HttpServletRequest"__annotation*
-
-%1*
-1*‡	
-1œ
-ƒ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java- -(›⁄
-œ
-ƒ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java- -(5R
-%0Lorg.springframework.security.oauth2.core.endpoint.OAuth2AuthorizationRequest"‚com.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository#loadAuthorizationRequest(Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/security/oauth2/core/endpoint/OAuth2AuthorizationRequest;*VT
-Rcom.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository*2
-0
-request%javax.servlet.http.HttpServletRequest2AloadAuthorizationRequest(Ljavax/servlet/http/HttpServletRequest;)"®
-œ
-ƒ/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.java- -(6T
-R
-%0Lorg.springframework.security.oauth2.core.endpoint.OAuth2AuthorizationRequest:0
-request%javax.servlet.http.HttpServletRequestBVT
-Rcom.example.backend.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository

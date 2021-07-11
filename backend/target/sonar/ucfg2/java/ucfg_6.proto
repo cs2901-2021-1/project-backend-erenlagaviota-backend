@@ -1,24 +1,0 @@
-
-Zcom.example.backend.security.oauth2.user.GoogleOAuth2UserInfo#getEmail()Ljava/lang/String;∫
-Ø/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/user/GoogleOAuth2UserInfo.java ("1*“
-1∫
-Ø/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/user/GoogleOAuth2UserInfo.java ("Æ
-´
-∫
-Ø/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/user/GoogleOAuth2UserInfo.java ("
-%0java.util.Map"__id*Q*O?
-=com.example.backend.security.oauth2.user.GoogleOAuth2UserInfo"
-
-attributesÑ
-Å
-∫
-Ø/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/user/GoogleOAuth2UserInfo.java (/
-%1java.lang.Object"__mapGet*
-
-%0java.util.Map*	
-email"◊
-∫
-Ø/home/lordmarcusvane/Hackprog/IS1/Proyecto/repos/project-backend-erenlagaviota-backend/backend/src/main/java/com/example/backend/security/oauth2/user/GoogleOAuth2UserInfo.java (0
-
-%1java.lang.ObjectBA?
-=com.example.backend.security.oauth2.user.GoogleOAuth2UserInfo
