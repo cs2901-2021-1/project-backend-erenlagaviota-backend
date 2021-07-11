@@ -7,6 +7,9 @@ import java.util.Map;
 import com.example.backend.exception.OAuth2AuthenticationProcessingException;
 
 public class OAuth2UserInfoFactory {
+    private OAuth2UserInfoFactory() {
+        throw new IllegalStateException("Utility class");
+    }
     public static OAuth2UserInfo getOAuth2UserInfo(String registrationId, Map<String, Object> attributes) {
         if (registrationId.equalsIgnoreCase(GOOGLE.toString())) {
             return new GoogleOAuth2UserInfo(attributes);

@@ -57,10 +57,6 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
                 .getCookie(request, HttpCookieOAuth2AuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME)
                 .map(Cookie::getValue);
 
-        // if (redirectUri.isPresent() && !isAuthorizedRedirectUri(redirectUri.get())) {
-        //     throw new BadRequestException("Unauthorized redirect URI and can't proceed with the authentication");
-        // }
-
         String targetUrl = redirectUri.orElse(getDefaultTargetUrl());
         String token = tokenProvider.createToken(authentication);
         return UriComponentsBuilder.fromUriString(targetUrl).queryParam("token", token).build().toUriString();
@@ -69,19 +65,5 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     protected void clearAuthenticationAttributes(HttpServletRequest request, HttpServletResponse response) {
         super.clearAuthenticationAttributes(request);
         httpCookieOAuth2AuthorizationRequestRepository.removeAuthorizationRequestCookies(request, response);
-    }
-
-    private boolean isAuthorizedRedirectUri(String uri) {
-        URI clientRedirectUri = URI.create(uri);
-
-        return appConfig.getAuthorizedRedirectUris().stream().anyMatch(authorizedRedirectUri -> {
-            // Only validate host and port
-            URI authorizedURI = URI.create(authorizedRedirectUri);
-            if (authorizedURI.getHost().equalsIgnoreCase(clientRedirectUri.getHost())
-                    && authorizedURI.getPort() == clientRedirectUri.getPort()) {
-                return true;
-            }
-            return false;
-        });
     }
 }
