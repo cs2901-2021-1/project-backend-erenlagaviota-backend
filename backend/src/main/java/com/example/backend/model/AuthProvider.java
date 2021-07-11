@@ -1,5 +1,5 @@
 package com.example.backend.model;
 
 public enum AuthProvider{
-    google
+    GOOGLE
 }
