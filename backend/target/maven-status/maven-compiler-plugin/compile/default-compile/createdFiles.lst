@@ -1,6 +1,6 @@
-com/example/backend/service/UserService.class
-com/example/backend/security/oauth2/user/OAuth2UserInfo.class
 com/example/backend/exception/BadRequestException.class
+com/example/backend/security/oauth2/user/OAuth2UserInfo.class
+com/example/backend/service/UserService.class
 com/example/backend/controller/UserController.class
 com/example/backend/security/CurrentUser.class
 com/example/backend/security/oauth2/HttpCookieOAuth2AuthorizationRequestRepository.class
@@ -14,8 +14,8 @@ com/example/backend/model/AuthProvider.class
 com/example/backend/controller/DataController.class
 com/example/backend/model/CourseDTO.class
 com/example/backend/util/CookieUtils.class
-com/example/backend/security/RestAuthenticationEntryPoint.class
 com/example/backend/exception/ResourceNotFoundException.class
+com/example/backend/security/RestAuthenticationEntryPoint.class
 com/example/backend/model/User.class
 com/example/backend/security/CustomOAuth2UserService.class
 com/example/backend/security/oauth2/OAuth2AuthenticationSuccessHandler.class
