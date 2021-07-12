@@ -2,6 +2,7 @@ package com.example.backend.security;
 
 import java.util.Optional;
 
+import com.example.backend.config.TemporalData;
 import com.example.backend.exception.OAuth2AuthenticationProcessingException;
 import com.example.backend.model.User;
 import com.example.backend.repository.UserRepository;
@@ -48,6 +49,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         if (userOptional.isPresent()) {
             user = userOptional.get();
+            TemporalData.imageUrl.put(user.getEmail(),oAuth2UserInfo.getImageUrl());
         } else {
             throw new OAuth2AuthenticationProcessingException("User not found");
         }

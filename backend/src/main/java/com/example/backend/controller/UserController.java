@@ -1,5 +1,11 @@
 package com.example.backend.controller;
 
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+import com.example.backend.config.TemporalData;
 import com.example.backend.exception.ResourceNotFoundException;
 import com.example.backend.model.User;
 import com.example.backend.repository.UserRepository;
@@ -21,8 +27,18 @@ public class UserController {
 
     @GetMapping("/profile")
     @PreAuthorize("hasRole('USER')")
-    public User getCurrentUser(@CurrentUser UserPrincipal userPrincipal) {
-        return userRepository.findByEmail(userPrincipal.getEmail())
+    public Map<String, Object> getCurrentUser(@CurrentUser UserPrincipal userPrincipal)
+            throws IllegalArgumentException, IllegalAccessException {
+        Map<String, Object> userMap = new HashMap<String, Object>();
+        User user = userRepository.findByEmail(userPrincipal.getEmail())
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userPrincipal.getEmail()));
+        Field[] userFields = user.getClass().getDeclaredFields();
+        for (Field field : userFields) {
+            field.setAccessible(true);
+            Object value = field.get(user);
+            userMap.put(field.getName(), value);
+        }
+        userMap.put("imageUrl", TemporalData.imageUrl.get(user.getEmail()));
+        return userMap;
     }
 }
