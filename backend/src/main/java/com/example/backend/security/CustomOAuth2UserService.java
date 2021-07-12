@@ -4,7 +4,6 @@ import java.util.Optional;
 
 import com.example.backend.exception.OAuth2AuthenticationProcessingException;
 import com.example.backend.model.User;
-import com.example.backend.security.UserPrincipal;
 import com.example.backend.repository.UserRepository;
 import com.example.backend.security.oauth2.user.OAuth2UserInfo;
 import com.example.backend.security.oauth2.user.OAuth2UserInfoFactory;

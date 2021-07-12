@@ -1,7 +1,6 @@
 package com.example.backend.security.oauth2;
 
 import java.io.IOException;
-import java.net.URI;
 import java.util.Optional;
 
 import javax.servlet.ServletException;
@@ -9,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.example.backend.config.AppConfig;
-import com.example.backend.exception.BadRequestException;
 import com.example.backend.security.TokenProvider;
 import com.example.backend.util.CookieUtils;
 

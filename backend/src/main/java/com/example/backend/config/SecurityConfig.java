@@ -1,7 +1,5 @@
 package com.example.backend.config;
 
-import java.util.Arrays;
-import java.util.Collections;
 
 import com.example.backend.security.CustomOAuth2UserService;
 import com.example.backend.security.RestAuthenticationEntryPoint;
@@ -19,9 +17,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 
 import lombok.RequiredArgsConstructor;
 

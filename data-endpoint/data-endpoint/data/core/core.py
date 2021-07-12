@@ -95,10 +95,10 @@ class Core:
         self.projection = lin_model
         self.correlationMatrix = mergedDf.corr().round(2)
 
-    def getProjection(self, codCurso: str):
+    def getProjection(self, codCurso: str) -> int: # type: ignore
         if self.ondemand:
             cursoNota = float(self.collector.cursoNota[self.collector.cursoNota['cod_curso'] == codCurso]['average']) # type: ignore
             cursoRep = float(self.collector.cursoRep[self.collector.cursoRep['cod_curso'] == codCurso]['average']) # type: ignore
             countPast = float(self.collector.countPast[self.collector.countPast['cod_curso'] == codCurso]['count']) # type: ignore
-            return self.projection.predict(np.array([[cursoNota,cursoRep,countPast]]))[0][0]  # type: ignore
+            return int(self.projection.predict(np.array([[cursoNota,cursoRep,countPast]]))[0][0])  # type: ignore
         
