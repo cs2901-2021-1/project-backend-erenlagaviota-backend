@@ -11,6 +11,7 @@ import org.springframework.http.client.support.BasicAuthenticationInterceptor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,8 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@RestController("/data")
+@RestController()
 @RequiredArgsConstructor
+@RequestMapping("/data")
 public class DataController {
 
     @PostMapping("/numericalProjection")
