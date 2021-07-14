@@ -1,6 +1,5 @@
 package com.example.backend.controller;
 
-
 import com.example.backend.config.Constants;
 import com.example.backend.model.api.ResponseCourseNumericalProjection;
 import com.example.backend.model.api.CourseNumericalProjection;
@@ -18,7 +17,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.Map;
 
-
 @RestController()
 @RequiredArgsConstructor
 @RequestMapping("/data")
@@ -28,16 +26,19 @@ public class DataController {
     @PreAuthorize("hasRole('USER')")
     public Map<String, Integer> getNumericalProjection(@RequestBody ResponseCourseNumericalProjection courseDTO) {
         HashMap<String, String> course = new HashMap<>();
-        course.put("course",courseDTO.getCourse());
+        course.put("course", courseDTO.getCourse());
 
         HttpEntity<HashMap<String, String>> request = new HttpEntity<>(course);
 
         var restTemplate = new RestTemplate();
         restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
-        var response = restTemplate.postForObject(Constants.ENDPOINT_URL + "api/numerical/data", request, CourseNumericalProjection.class);
+        var response = restTemplate.postForObject(Constants.ENDPOINT_URL + "api/numerical/data", request,
+                CourseNumericalProjection.class);
 
         HashMap<String, Integer> result = new HashMap<>();
-        result.put("numericalProjection", response.getNumericalProjection());
+        if (response != null) {
+            result.put("numericalProjection", response.getNumericalProjection());
+        }
         return result;
     }
 }
