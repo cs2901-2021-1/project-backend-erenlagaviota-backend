@@ -47,7 +47,7 @@ class Collector:
         connection = os.getenv('DB_CONNECTION')
         if connection is not None:
             self.connectionString = connection
-            self.periodLimit = '2021-1'
+            self.periodLimit = '2020-2'
             self.periodInfo = []
         else:
             raise Exception("error")
