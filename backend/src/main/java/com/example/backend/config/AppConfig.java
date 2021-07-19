@@ -28,8 +28,7 @@ public class AppConfig {
         return tokenExpirationMsec;
     }
 
-    // TODO:  <12-07-21, Mario> Get a better tokenSecret //
-    private String tokenSecret = "pruebaprueba";
+    private String tokenSecret = "XhKJipRfDRN4QE3s0LVlAffxgH46keJK3U7PQCxWXM4pbGDROUCPPB8udKCuX7q";
 
     private long tokenExpirationMsec = 1860000;
 

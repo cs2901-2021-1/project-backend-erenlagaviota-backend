@@ -4,4 +4,8 @@ import java.util.HashMap;
 
 public class TemporalData {
     static public HashMap<String, String> imageUrl = new HashMap<>();
+
+    private TemporalData(){
+        // prevent default
+    }
 }

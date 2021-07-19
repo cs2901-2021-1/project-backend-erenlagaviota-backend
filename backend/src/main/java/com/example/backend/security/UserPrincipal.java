@@ -4,6 +4,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
+
 import com.example.backend.model.User;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -12,12 +14,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 public class UserPrincipal implements OAuth2User, UserDetails {
+    static final Logger logger = Logger.getLogger(UserPrincipal.class.getName());
 
     private Long userId;
     private String email;
 
     private Collection<? extends GrantedAuthority> authorities;
-    private Map<String, Object> attributes;
+    private transient Map<String, Object> attributes;
 
     public UserPrincipal(Long id, String email, Collection<? extends GrantedAuthority> authorities) {
         this.userId = id;
@@ -85,6 +88,7 @@ public class UserPrincipal implements OAuth2User, UserDetails {
     }
 
     public String getEmail() {
+        logger.info("Getting email");
         return email;
     }
 

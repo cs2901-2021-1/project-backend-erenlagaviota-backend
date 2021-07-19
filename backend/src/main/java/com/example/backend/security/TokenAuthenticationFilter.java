@@ -1,5 +1,6 @@
 package com.example.backend.security;
 
+import java.util.logging.Logger;
 import com.example.backend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import java.io.IOException;
 
 @Slf4j
 public class TokenAuthenticationFilter extends OncePerRequestFilter {
+    static final Logger logger = Logger.getLogger(TokenAuthenticationFilter.class.getName());
 
     @Autowired
     private TokenProvider tokenProvider;
@@ -41,6 +43,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         } catch (Exception ex) {
+            logger.info("Error finding user");
         }
 
         filterChain.doFilter(request, response);

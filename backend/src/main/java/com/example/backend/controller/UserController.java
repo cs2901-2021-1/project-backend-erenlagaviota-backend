@@ -1,7 +1,5 @@
 package com.example.backend.controller;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
 import java.util.Map;
 
 import com.example.backend.config.TemporalData;
@@ -16,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
 
 @RestController
 @RequiredArgsConstructor
@@ -28,15 +28,12 @@ public class UserController {
     @PreAuthorize("hasRole('USER')")
     public Map<String, Object> getCurrentUser(@CurrentUser UserPrincipal userPrincipal)
             throws IllegalArgumentException, IllegalAccessException {
-        Map<String, Object> userMap = new HashMap<String, Object>();
+        var objectMapper = new ObjectMapper();
         User user = userRepository.findByEmail(userPrincipal.getEmail())
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userPrincipal.getEmail()));
-        Field[] userFields = user.getClass().getDeclaredFields();
-        for (Field field : userFields) {
-            field.setAccessible(true);
-            Object value = field.get(user);
-            userMap.put(field.getName(), value);
-        }
+
+        Map<String, Object> userMap = objectMapper.convertValue(user, new TypeReference<Map<String, Object>>() {
+        });
         userMap.put("imageUrl", TemporalData.imageUrl.get(user.getEmail()));
         return userMap;
     }
