@@ -49,6 +49,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         getRedirectStrategy().sendRedirect(request, response, targetUrl);
     }
 
+    @Override
     protected String determineTargetUrl(HttpServletRequest request, HttpServletResponse response,
             Authentication authentication) {
         Optional<String> redirectUri = CookieUtils

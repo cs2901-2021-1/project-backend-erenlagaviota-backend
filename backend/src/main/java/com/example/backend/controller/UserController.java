@@ -27,7 +27,7 @@ public class UserController {
     @GetMapping("/profile")
     @PreAuthorize("hasRole('USER')")
     public Map<String, Object> getCurrentUser(@CurrentUser UserPrincipal userPrincipal)
-            throws IllegalArgumentException, IllegalAccessException {
+            throws IllegalArgumentException  {
         var objectMapper = new ObjectMapper();
         User user = userRepository.findByEmail(userPrincipal.getEmail())
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userPrincipal.getEmail()));

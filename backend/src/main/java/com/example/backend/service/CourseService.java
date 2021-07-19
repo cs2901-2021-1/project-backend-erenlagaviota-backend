@@ -1,5 +1,5 @@
 package com.example.backend.service;
 
-public class CourseService {
+public interface CourseService {
 
 }

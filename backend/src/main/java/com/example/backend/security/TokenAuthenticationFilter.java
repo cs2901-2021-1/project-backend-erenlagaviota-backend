@@ -18,7 +18,7 @@ import java.io.IOException;
 
 @Slf4j
 public class TokenAuthenticationFilter extends OncePerRequestFilter {
-    static final Logger logger = Logger.getLogger(TokenAuthenticationFilter.class.getName());
+    static final Logger loggerToken = Logger.getLogger(TokenAuthenticationFilter.class.getName());
 
     @Autowired
     private TokenProvider tokenProvider;
@@ -43,7 +43,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         } catch (Exception ex) {
-            logger.info("Error finding user");
+            loggerToken.info("Error finding user");
         }
 
         filterChain.doFilter(request, response);

@@ -1,9 +1,10 @@
 package com.example.backend.config;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class TemporalData {
-    static public HashMap<String, String> imageUrl = new HashMap<>();
+    public static final Map<String, String> imageUrl = new HashMap<>();
 
     private TemporalData(){
         // prevent default
