@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController()
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/data")
 public class DataController {

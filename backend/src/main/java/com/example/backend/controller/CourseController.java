@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 import lombok.RequiredArgsConstructor;
 
-@RestController()
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/courses")
 public class CourseController {
