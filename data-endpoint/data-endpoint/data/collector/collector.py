@@ -45,8 +45,10 @@ class Collector:
          TODO:  <08-07-21, Mario> Function to get the periodLimit
         """
         connection = os.getenv('DB_CONNECTION')
-        if connection is not None:
+        connnectionPostres = os.getenv('DB_CONNECTION_PRIMARY')
+        if connection is not None and connnectionPostres is not None:
             self.connectionString = connection
+            self.connectionStringPrimary = connnectionPostres
             self.periodLimit = '2020-2'
             self.periodInfo = []
         else:
@@ -54,6 +56,10 @@ class Collector:
 
     def getConnection(self):
         engine = create_engine(self.connectionString)
+        return engine
+
+    def getConnectionPrimary(self):
+        engine = create_engine(self.connectionStringPrimary)
         return engine
 
     def getPeriodInfo(self):
@@ -182,11 +188,11 @@ class Collector:
         GROUP BY ACT.IDACTIVIDAD, AMT.CODPERIODORANGO
         """), con=connection)
 
-        self.cursoNota = averageCursoNotasDf[averageCursoNotasDf['codperiodorango'] # type: ignore
+        self.cursoNota = averageCursoNotasDf[averageCursoNotasDf['codperiodorango']  # type: ignore
                                              == codPeriodlimit]
-        self.cursoRep = averageCursoRepDf[averageCursoRepDf['codperiodorango'] # type: ignore
+        self.cursoRep = averageCursoRepDf[averageCursoRepDf['codperiodorango']  # type: ignore
                                           == codPeriodlimit]
-        self.countPast = averageCountPastDf[averageCountPastDf['codperiodorango'] # type: ignore
+        self.countPast = averageCountPastDf[averageCountPastDf['codperiodorango']  # type: ignore
                                             == codPeriodlimit]
 
         if averageCursoNotasDf['codperiodorango'] is not None and averageCursoRepDf['codperiodorango'] is not None and averageCountPastDf['codperiodorango'] is not None and periodosDf is not None:
@@ -222,17 +228,31 @@ class Collector:
                                             == codPeriodlimit]
             if countCurrentDf is not None:
                 countCurrentDf = countCurrentDf.drop(columns='codperiodorango')
-                countCurrentDf = countCurrentDf.groupby( # type: ignore
-                    by=['cod_curso'], as_index=False).mean()  
+                countCurrentDf = countCurrentDf.groupby(  # type: ignore
+                    by=['cod_curso'], as_index=False).mean()
             else:
                 raise PeriodRangeError()
 
         return averageCursoNotasDf, averageCursoRepDf, averageCountPastDf, countCurrentDf
 
-    def getExternalDataCached(self):
-        if (True):
+    def getExternalDataCached(self, shouldOnDemand=False, course = ""):
+        if not shouldOnDemand:
+                connection = self.getConnectionPrimary()
+                cursosCached = pd.read_sql(text("SELECT * FROM cache_projection where cod_curso= :codcurso").bindparams(codcurso = course),con=connection)
+                if cursosCached.empty:
+                    return True, self.getExternalData()
+                else:
+                    projection = int(cursosCached[cursosCached['cod_curso'] == course]['numericalprojection']) # type: ignore
+                    return False, projection 
+        else:
             return True, self.getExternalData()
         # TODO:  <08-07-21, Mario> Define when it is needed to fetch data or use a cached version
+
+    def saveDataCache(self, course, numericalprojection):
+        connection = self.getConnectionPrimary()
+        connection.connect().execute(text("""
+            INSERT INTO cache_projection VALUES(:course,:numericalprojection) ON CONFLICT (cod_curso) DO UPDATE SET numericalprojection = excluded.numericalprojection;
+        """).bindparams(course=course,numericalprojection=numericalprojection),con=connection)
 
     def getCursos(self):
         connection = self.getConnection()
@@ -279,6 +299,6 @@ class Collector:
         """).bindparams(periodLimit=codPeriodlimit), con=connection)
 
         if cursosMetaInfo is not None:
-            return cursosMetaInfo.to_json(orient='records',force_ascii=False)
+            return cursosMetaInfo.to_json(orient='records', force_ascii=False)
         else:
             raise PeriodError()

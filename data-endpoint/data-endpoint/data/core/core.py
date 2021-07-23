@@ -47,17 +47,20 @@ class Core:
     projection: LinearRegression
     r2: float
     correlationMatrix: pd.DataFrame
+    cachedProjection: int
 
-    def __init__(self):
+    def __init__(self, course="", shouldOnDemand = False):
         """
         Instantiate collector and params
         """
         self.collector = Collector()
-        params = self.collector.getExternalDataCached()
+        params = self.collector.getExternalDataCached(shouldOnDemand=shouldOnDemand,course=course)
         self.ondemand = params[0]
         if self.ondemand:
-            self.params = params[1]
+            self.params = params[1] # type: ignore
             self.getModel()
+        else:
+            self.cachedProjection = params[1] # type: ignore
         # TODO:  <08-07-21, Mario> Implement not ondemand mode
 
     def getModel(self):
@@ -100,5 +103,9 @@ class Core:
             cursoNota = float(self.collector.cursoNota[self.collector.cursoNota['cod_curso'] == codCurso]['average']) # type: ignore
             cursoRep = float(self.collector.cursoRep[self.collector.cursoRep['cod_curso'] == codCurso]['average']) # type: ignore
             countPast = float(self.collector.countPast[self.collector.countPast['cod_curso'] == codCurso]['count']) # type: ignore
-            return int(self.projection.predict(np.array([[cursoNota,cursoRep,countPast]]))[0][0])  # type: ignore
+            result = int(self.projection.predict(np.array([[cursoNota,cursoRep,countPast]]))[0][0]) # type: ignore
+            self.collector.saveDataCache(codCurso,result);
+            return result  # type: ignore
+        else:
+            return self.cachedProjection
         

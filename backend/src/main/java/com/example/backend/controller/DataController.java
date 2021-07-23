@@ -27,6 +27,7 @@ public class DataController {
     public Map<String, Integer> getNumericalProjection(@RequestBody ResponseCourseNumericalProjection courseDTO) {
         HashMap<String, String> course = new HashMap<>();
         course.put("course", courseDTO.getCourse());
+        course.put("onDemand",courseDTO.getOnDemand());
 
         HttpEntity<HashMap<String, String>> request = new HttpEntity<>(course);
 

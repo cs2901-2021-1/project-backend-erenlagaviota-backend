@@ -1,6 +1,5 @@
 import json
 from flask.blueprints import Blueprint
-from flask.wrappers import Response
 from flask import jsonify
 from ...data.collector.collector import Collector
 from ...security.security import auth_required
