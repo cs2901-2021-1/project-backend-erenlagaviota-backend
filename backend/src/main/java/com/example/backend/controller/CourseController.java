@@ -5,6 +5,7 @@ import java.util.HashMap;
 import com.example.backend.config.Constants;
 import com.nimbusds.jose.shaded.json.JSONArray;
 
+import org.hibernate.mapping.Map;
 import org.springframework.http.client.support.BasicAuthenticationInterceptor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,16 +22,21 @@ public class CourseController {
     @GetMapping("/valid")
     @PreAuthorize("hasRole('USER')")
     public Object getValidCourses() {
-        try {
             var restTemplate = new RestTemplate();
             restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
             JSONArray response = new JSONArray();
-            response = restTemplate.getForObject(Constants.ENDPOINT_URL + "api/cursos/valid", response.getClass());
-            return response;
-        } catch (Exception e) {
             HashMap<String,String> error = new HashMap<>();
-            error.put("error",e.getMessage());
             return error;
-        }
+        // try {
+        //     var restTemplate = new RestTemplate();
+        //     restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
+        //     JSONArray response = new JSONArray();
+        //     response = restTemplate.getForObject(Constants.ENDPOINT_URL + "api/cursos/valid", response.getClass());
+        //     return response;
+        // } catch (Exception e) {
+        //     HashMap<String,String> error = new HashMap<>();
+        //     error.put("error",e.getMessage());
+        //     return error;
+        // }
     }
 }
