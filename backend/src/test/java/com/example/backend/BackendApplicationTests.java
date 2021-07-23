@@ -11,11 +11,15 @@ import org.springframework.boot.web.server.LocalServerPort;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.example.backend.config.Constants;
 import com.example.backend.model.api.ResponseCourseNumericalProjection;
+import com.nimbusds.jose.shaded.json.JSONArray;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.client.support.BasicAuthenticationInterceptor;
+import org.springframework.web.client.RestTemplate;
 
 // @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 // @Execution(ExecutionMode.CONCURRENT)
@@ -32,6 +36,15 @@ class BackendApplicationTests {
     @Test
     void contextLoads() {
         // assertThat(port).isNotZero();
+    }
+
+    @Test
+    void test1(){
+        var restTemplate = new RestTemplate();
+        restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
+        JSONArray response = new JSONArray();
+        response = restTemplate.getForObject(Constants.ENDPOINT_URL + "api/cursos/valid", response.getClass());
+        assertThat(response).isNotNull();
     }
 
     // @Test
