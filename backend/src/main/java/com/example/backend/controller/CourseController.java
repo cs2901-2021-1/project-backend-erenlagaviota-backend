@@ -15,28 +15,40 @@ import org.springframework.web.client.RestTemplate;
 
 import lombok.RequiredArgsConstructor;
 
+// @RestController
+// @RequiredArgsConstructor
+// @RequestMapping("/courses")
+// public class CourseController {
+//     @GetMapping("/valid")
+//     @PreAuthorize("hasRole('USER')")
+//     public Object getValidCourses() {
+//             // var restTemplate = new RestTemplate();
+//             // restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
+//             // JSONArray response = new JSONArray();
+//             HashMap<String,String> error = new HashMap<>();
+//             return error;
+//         // try {
+//         //     var restTemplate = new RestTemplate();
+//         //     restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
+//         //     JSONArray response = new JSONArray();
+//         //     response = restTemplate.getForObject(Constants.ENDPOINT_URL + "api/cursos/valid", response.getClass());
+//         //     return response;
+//         // } catch (Exception e) {
+//         //     HashMap<String,String> error = new HashMap<>();
+//         //     error.put("error",e.getMessage());
+//         //     return error;
+//         // }
+//     }
+// }
+//
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/courses")
 public class CourseController {
-    @GetMapping("/valid")
+    @GetMapping("/courses")
     @PreAuthorize("hasRole('USER')")
-    public Object getValidCourses() {
-            // var restTemplate = new RestTemplate();
-            // restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
-            // JSONArray response = new JSONArray();
-            HashMap<String,String> error = new HashMap<>();
-            return error;
-        // try {
-        //     var restTemplate = new RestTemplate();
-        //     restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
-        //     JSONArray response = new JSONArray();
-        //     response = restTemplate.getForObject(Constants.ENDPOINT_URL + "api/cursos/valid", response.getClass());
-        //     return response;
-        // } catch (Exception e) {
-        //     HashMap<String,String> error = new HashMap<>();
-        //     error.put("error",e.getMessage());
-        //     return error;
-        // }
+    public HashMap<String,String> getCurrentUser(){
+        HashMap<String,String> error = new HashMap<>();
+        error.put("asdd","asdd");
+        return error;
     }
 }
