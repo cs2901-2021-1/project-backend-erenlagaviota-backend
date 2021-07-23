@@ -7,10 +7,10 @@ spring:
     datasource:
         driver-class-name: org.postgresql.Driver
         initialization: always
-        password: aefdaf5763759fbbb5a426ba760f5288b4e74808053cbb28db14075fcb6a79b7
+        password: '*Sm^XeNqcjBh'
         testWhileIdle: true
-        url: jdbc:postgresql://ec2-3-231-69-204.compute-1.amazonaws.com:5432/da6rbtn5phqvkk
-        username: sukiqvzolsbbpu
+        url: jdbc:postgresql://isprojectionfinal.cbzcyx28iudw.us-east-2.rds.amazonaws.com:5432/ProjectionRoot
+        username: ISMain
         validationQuery: SELECT 1
         maxActive: 5
         minActive: 1
