@@ -12,6 +12,8 @@ spring:
         url: jdbc:postgresql://ec2-3-231-69-204.compute-1.amazonaws.com:5432/da6rbtn5phqvkk
         username: sukiqvzolsbbpu
         validationQuery: SELECT 1
+        maxActive: 5
+        minActive: 1
     jpa:
         generate-ddl: true
         hibernate:
