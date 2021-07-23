@@ -22,9 +22,9 @@ public class CourseController {
     @GetMapping("/valid")
     @PreAuthorize("hasRole('USER')")
     public Object getValidCourses() {
-            var restTemplate = new RestTemplate();
-            restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
-            JSONArray response = new JSONArray();
+            // var restTemplate = new RestTemplate();
+            // restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor("prueba", "prueba"));
+            // JSONArray response = new JSONArray();
             HashMap<String,String> error = new HashMap<>();
             return error;
         // try {
