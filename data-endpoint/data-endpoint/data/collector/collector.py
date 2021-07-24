@@ -49,7 +49,7 @@ class Collector:
         if connection is not None and connnectionPostres is not None:
             self.connectionString = connection
             self.connectionStringPrimary = connnectionPostres
-            self.periodLimit = '2020-2'
+            self.periodLimit = self.getPeriodLimit()
             self.periodInfo = []
         else:
             raise Exception("error")
@@ -61,6 +61,17 @@ class Collector:
     def getConnectionPrimary(self):
         engine = create_engine(self.connectionStringPrimary)
         return engine
+
+    def getPeriodLimit(self):
+        engine = self.getConnectionPrimary()
+        period = pd.read_sql(text("""
+        SELECT * FROM period
+        """),con=engine)
+        if period['periodlimit'] is not None:
+            periodStr = str(period['periodlimit'][0])
+            return periodStr 
+        else:
+            raise PeriodError()
 
     def getPeriodInfo(self):
         """
