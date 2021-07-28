@@ -29,7 +29,7 @@ spring:
                     google:
                         client-id: 97330989195-eeb5iqmomfu7k03ghiqbcijne16koj66.apps.googleusercontent.com
                         client-secret: PeMsyaD8I-w1W2t9kPpjBwv5
-                        redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+                        redirectUri: "https://api.cs.mrg.com.pe/api-sec02-group03/oauth2/callback/{registrationId}"
                         scope:
                           - email
                           - profile
